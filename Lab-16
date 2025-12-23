@@ -1,0 +1,17 @@
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame({
+    'A': [1, np.nan, np.nan, 4],
+    'B': [5, np.nan, 7, np.nan],
+    'C': [np.nan, 10, np.nan, 12],
+    'D': [2, np.nan, 3, 4]
+})
+
+print("Original DataFrame:")
+print(df)
+
+filtered_df = df[df.isna().sum(axis=1) >= 2]  # Fixed: df.isna() not df.isma()
+
+print("\nRows with at least 2 NaN values:")
+print(filtered_df)
