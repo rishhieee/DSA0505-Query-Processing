@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+y = [10, 15, 13, 18, 20]
+
+plt.plot(x, y, marker='o', linestyle='-', color='blue', label='Line 1')
+
+plt.xlabel('X-axis Label')
+plt.ylabel('Y-axis Label')
+plt.title('Sample Line Plot')
+
+plt.legend()
+
+plt.show()
