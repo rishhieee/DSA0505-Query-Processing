@@ -1,0 +1,16 @@
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame({
+    'A': [1, 2, np.nan, 4],
+    'B': [5, np.nan, 7, 8],
+    'C': [np.nan, 10, 11, np.nan],
+    'D': [np.nan, 14, 15, 16]
+})
+
+print("Original DataFrame with NaN values:")
+print(df)
+
+df_filed = df.filna(0)
+print("\nDataFrame after replacing missing values with 0:")
+print[df_filed]
