@@ -1,0 +1,22 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate random data
+np.random.seed(0)  # for reproducibility
+x = np.random.rand(50)  # 50 random numbers between 0 and 1
+y = np.random.rand(50)
+
+# Create scatter plot
+plt.figure(figsize=(8,6))
+plt.scatter(x, y, color='blue', marker='o', s=50, alpha=0.7)
+
+# Labels and title
+plt.xlabel('Random X values')
+plt.ylabel('Random Y values')
+plt.title('Scatter Plot of Randomly Distributed X and Y')
+
+# Show grid
+plt.grid(True)
+
+# Display plot
+plt.show()
