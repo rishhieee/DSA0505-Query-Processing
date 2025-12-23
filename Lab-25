@@ -1,0 +1,26 @@
+import matplotlib.pyplot as plt
+
+# Sample data
+x = [1, 2, 3, 4, 5]
+y1 = [2, 3, 5, 7, 11]
+y2 = [1, 4, 6, 8, 10]
+y3 = [3, 5, 2, 6, 9]
+
+# Plot multiple lines with different styles
+plt.plot(x, y1, color='blue', linewidth=2, marker='o', label='Line 1')
+plt.plot(x, y2, color='red', linewidth=3, marker='s', label='Line 2')
+plt.plot(x, y3, color='green', linewidth=1.5, marker='^', label='Line 3')
+
+# Labels and title
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Multiple Line Plot with Legends and Different Styles')
+
+# Add legend
+plt.legend()
+
+# Show grid
+plt.grid(True)
+
+# Display the plot
+plt.show()
