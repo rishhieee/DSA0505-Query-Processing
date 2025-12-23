@@ -1,0 +1,37 @@
+import matplotlib.pyplot as plt
+
+# Sample data
+x = [1, 2, 3, 4, 5]  # Fixed: Changed 'B' to 3
+y1 = [2, 3, 5, 7, 11]
+y2 = [1, 4, 6, 8, 10]
+y3 = [3, 5, 2, 6, 9]
+y4 = [5, 3, 4, 2, 7]
+
+# Create a figure with 2x2 subplots
+plt.figure(figsize=(10,8))
+
+# First subplot
+plt.subplot(2, 2, 1)  # (rows, columns, plot_number)
+plt.plot(x, y1, color='blue', marker='o')
+plt.title('Plot 1')
+
+# Second subplot
+plt.subplot(2, 2, 2)
+plt.plot(x, y2, color='red', marker='s')
+plt.title('Plot 2')
+
+# Third subplot
+plt.subplot(2, 2, 3)
+plt.plot(x, y3, color='green', marker='^')
+plt.title('Plot 3')
+
+# Fourth subplot
+plt.subplot(2, 2, 4)
+plt.plot(x, y4, color='purple', marker='d')
+plt.title('Plot 4')
+
+# Adjust layout to prevent overlap
+plt.tight_layout()
+
+# Show all plots
+plt.show()
