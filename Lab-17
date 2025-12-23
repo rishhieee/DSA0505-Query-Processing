@@ -1,0 +1,18 @@
+import pandas as pd
+
+df = pd.DataFrame({
+    'School_code': [501, 502, 501, 503, 502, 501],
+    'Student_Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva', 'Frank'],
+    'Marks': [85, 90, 78, 92, 88, 75]
+})
+
+print("Original DataFrame:")
+print(df)
+
+grouped = df.groupby('School_code')
+
+print("\nType of grouped object:", type(grouped))
+
+for school_code, group in grouped:
+    print(f"\nGroup: {school_code}")
+    print(group)
