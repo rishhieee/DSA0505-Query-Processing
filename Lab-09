@@ -1,0 +1,10 @@
+import pandas as pd
+
+df = pd.read_csv("C:/Users/HP/OneDrive/Documents/k*n.x'y'h/gs/expl.csv")
+pivot_table = pd.pivot_table(
+    df,
+    index=['Region', 'Manager', 'Salesman'], 
+    values='Sales_Amount',
+    aggfunc='sum'
+)
+print(pivot_table)
