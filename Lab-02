@@ -1,0 +1,6 @@
+import pandas as pd
+df = pd.read_csv("C:/Users/HP/OneDrive/Documents/ k*# a x'y h /Qs/exp1.csv")
+emp_ids = df.groupby('EMPLOYEE_ID').filter(
+    lambda x: x['JOB ID'].count() >= 2  # The column name '0OB ID' was unclear, likely meant 'JOB ID'
+)['EMPLOYEE_ID'].unique()
+print(emp_ids)
