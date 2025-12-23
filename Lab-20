@@ -1,0 +1,16 @@
+import pandas as pd  # Fixed: 'import' not 'export'
+
+df = pd.DataFrame({
+    'Country': ['United States', 'Canada', 'France', 'Germany', 'Australia'],  # Fixed: closing quote
+    'Capital': ['Washington', 'Ottawa', 'Paris', 'Berlin', 'Canberra']
+})
+
+print("Original DataFrame:")
+print(df)
+
+substring = 'an'
+
+df['Substring_Index'] = df['Country'].str.find(substring)
+
+print("\nDataFrame with substring index:")
+print(df)
