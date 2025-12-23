@@ -1,0 +1,13 @@
+import pandas as pd
+import numpy as np
+
+np.random.seed(0)
+df = pd.DataFrame(
+    np.random.randint(-50, 50, size=(10, 4)),
+    columns=['A', 'B', 'C', 'D']  # Fixed: removed the '^' before 'A'
+)
+
+def highlight_numbers(val):
+    return 'color: red' if val < 0 else 'color: black'
+
+df.style.map(highlight_numbers)
